@@ -6,15 +6,23 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Lonelycube的博客</title>
+  <title>Perl语言学习（二）- 序列与字符串 | Lonelycube的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lonelycube的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="上一篇我们初步了解了Perl语言的相关信息，并成功编写了一个简单的程序。在本篇中，我们将开始编写一个用来处理 DNA 和蛋白质的生物序列数据 的Perl 程序，可以进行如把 DNA 转录成 RNA、把序列连接起来、获取反向互补序列、从文件中读取序列等操作。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Perl语言学习（二）- 序列与字符串">
+<meta property="og:url" content="http://yoursite.com/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/index.html">
 <meta property="og:site_name" content="Lonelycube的博客">
+<meta property="og:description" content="上一篇我们初步了解了Perl语言的相关信息，并成功编写了一个简单的程序。在本篇中，我们将开始编写一个用来处理 DNA 和蛋白质的生物序列数据 的Perl 程序，可以进行如把 DNA 转录成 RNA、把序列连接起来、获取反向互补序列、从文件中读取序列等操作。">
 <meta property="og:locale" content="zh_CN">
+<meta property="og:image" content="http://yoursite.com/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/tihuan.PNG">
+<meta property="article:published_time" content="2020-01-14T08:30:51.000Z">
+<meta property="article:modified_time" content="2020-02-15T01:50:02.128Z">
 <meta property="article:author" content="Lonelycube">
+<meta property="article:tag" content="Perl">
+<meta property="article:tag" content="编程相关">
 <meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="http://yoursite.com/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/tihuan.PNG">
   
     <link rel="alternative" href="/atom.xml" title="Lonelycube的博客" type="application/atom+xml">
   
@@ -185,126 +193,178 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-Perl语言学习（二）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/01/15/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-15T01:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
-</a>
-        </div>
-    	 
+      <header class="article-header">
+        
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/">Perl语言学习（三）- 基序和循环</a>
+    <h1 class="article-title" itemprop="name">
+      Perl语言学习（二）- 序列与字符串
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Perl</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程相关</a>
-        		</li>
-      		
-		</ul>
-	</div>
+		
+	
+		
+		<!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+		 <br/>
+          <a style="margin-top:0px;font-size:13px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+		<span class="icon-search" style="font-size:13px;color:#ff5151"></span>
+        <span class="post-meta-item-text" style="color:grey;font-size:13px;">  字数统计: </span>
+        <span class="post-count" >1.4k</span>
+		<span style="color:grey;font-size:12px;">字</span>
+      </span>
+    </span>
 
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/01/15/test%E4%BD%A0%E5%A5%BD%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-15T00:18:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
+    <span class="post-time">
+      &nbsp;  &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+		<span class="icon-clock" style="font-size:13px;color:#00b3b3"></span>
+        <span class="post-meta-item-text" style="color:grey;font-size:13px;">  阅读时长: </span>
+        <span class="post-count">5</span>
+		<span style="color:grey;font-size:13px;">分</span>
+      </span>
+    </span>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/test%E4%BD%A0%E5%A5%BD%EF%BC%88%E4%B8%80%EF%BC%89/">test你好（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">perl</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ss</a>
-        		</li>
-      		
-		</ul>
-	</div>
 
           
+        <!-- 添加完成 -->
+		
+		<!--显示阅读次数-->
+		
+		
+			<a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;"> &nbsp;  &nbsp;
+			<span class="icon-list" style="font-size:13px;color:green;font-weight:bold "></span>
+			
+			<span id="busuanzi_container_page_pv" style="color:grey;font-size:13px;">
+				阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+			</span>
+			</a>
+		
+		<!--显示阅读次数完毕-->
 
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
 
 <a href="/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
   	<time datetime="2020-01-14T08:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-14</time>
 </a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/">Perl语言学习（二）- 序列与字符串</a>
-    </h1>
-  
+		
+      </header>
+    
+	
+	<!-- 目录内容 -->
 
-        <div class="article-info info-on-right">
-          
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#序列与字符串"><span class="toc-number">1.</span> <span class="toc-text">序列与字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、DNA的存储与输出"><span class="toc-number">1.1.</span> <span class="toc-text">一、DNA的存储与输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、拼接DNA片段"><span class="toc-number">1.2.</span> <span class="toc-text">二、拼接DNA片段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、DNA的转录"><span class="toc-number">1.3.</span> <span class="toc-text">三、DNA的转录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、反向互补"><span class="toc-number">1.4.</span> <span class="toc-text">四、反向互补</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、从文件中读取数据"><span class="toc-number">1.5.</span> <span class="toc-text">五、从文件中读取数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、总结"><span class="toc-number">1.6.</span> <span class="toc-text">六、总结</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <p>　　上一篇我们初步了解了Perl语言的相关信息，并成功编写了一个简单的程序。在本篇中，我们将开始编写一个用来处理 DNA 和蛋白质的生物序列数据 的Perl 程序，可以进行如把 DNA 转录成 RNA、把序列连接起来、获取反向互补序列、从文件中读取序列等操作。</p>
+<a id="more"></a>
+
+
+
+<h1 id="序列与字符串"><a href="#序列与字符串" class="headerlink" title="序列与字符串"></a>序列与字符串</h1><h2 id="一、DNA的存储与输出"><a href="#一、DNA的存储与输出" class="headerlink" title="一、DNA的存储与输出"></a>一、DNA的存储与输出</h2><p>这里我们编写一个程序，使它能把 DNA 序列存储在变量中，并把它打印输出到屏幕上，代码如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl </span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"><span class="keyword">use</span> warnings;</span><br><span class="line"><span class="keyword">use</span> utf8;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 将字符串复制给标量$DNA</span></span><br><span class="line"><span class="keyword">my</span> $DNA = <span class="string">"ATCGATCGATCGATCGATCGATCGATCGATCG"</span>;</span><br><span class="line"><span class="comment"># 输出变量</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"$DNA\n"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">ATCGATCGATCGATCGATCGATCGATCGATCG</span><br></pre></td></tr></table></figure>
+
+<p>在这个例子中，标量变量 $DNA存储着用 ACGT 表征的 DNA，是一个字符串。 在 Perl 中，你需要把它放在引号中来表明它是字符串。可以使用单引号，也可以使用双引号。 </p>
+<hr>
+<h2 id="二、拼接DNA片段"><a href="#二、拼接DNA片段" class="headerlink" title="二、拼接DNA片段"></a>二、拼接DNA片段</h2><p>我们还可以利用 Perl 将两条DNA片段简单的拼接成一条DNA链，涉及一些字符串的拼接操作，比较简单，代码如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"><span class="keyword">use</span> warnings;</span><br><span class="line"><span class="keyword">use</span> utf8;</span><br><span class="line"></span><br><span class="line"><span class="comment">#DNA的拼接 $DNA1 $DNA2</span></span><br><span class="line"><span class="keyword">my</span> $DNA1 = <span class="string">"AAAAAAAAAAAAAA"</span>;</span><br><span class="line"><span class="keyword">my</span> $DNA2 = <span class="string">"TTTTTTTTTTTTTT"</span>;</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">'这是两条DNA片段:'</span> . <span class="string">"\n"</span>; </span><br><span class="line"><span class="keyword">print</span> <span class="string">"$DNA1\n"</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"$DNA2\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> $DNA3 = $DNA1 . $DNA2;   <span class="comment"># 利用符号 . 来将两个字符串拼接在一起</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">'这是拼接后的DNA:'</span> . <span class="string">"\n"</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"$DNA3\n\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> $DNA1,$DNA2,<span class="string">"\n"</span>;     <span class="comment"># 利用符号 , 也可以来将两个字符串拼接在一起</span></span><br></pre></td></tr></table></figure>
+
+<p>运行结果如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line">这是两条DNA片段:</span><br><span class="line">AAAAAAAAAAAAAA</span><br><span class="line">TTTTTTTTTTTTTT</span><br><span class="line"></span><br><span class="line">这是拼接后的DNA:</span><br><span class="line">AAAAAAAAAAAAAATTTTTTTTTTTTTT</span><br><span class="line"></span><br><span class="line">AAAAAAAAAAAAAATTTTTTTTTTTTTT</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="三、DNA的转录"><a href="#三、DNA的转录" class="headerlink" title="三、DNA的转录"></a>三、DNA的转录</h2><p>我们都知道DNA转录需要利用到碱基互补配对原则，那如何用 Perl 语言实现这一操作呢？这里我们就需要用到替换操作，利用绑定操作符进行碱基的替换。</p>
+<p>由于转录过程涉复杂，下面的例子仅仅是简单的将 T 替换为 U ，代码如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"><span class="keyword">use</span> warnings;</span><br><span class="line"><span class="keyword">use</span> utf8;</span><br><span class="line"></span><br><span class="line"><span class="comment"># DNA序列</span></span><br><span class="line"><span class="keyword">my</span> $DNA1 = <span class="string">"AATTCCTT\n"</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"这是DNA编码链：\n"</span>;</span><br><span class="line"><span class="keyword">print</span> $DNA1,<span class="string">"\n\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># DNA的转录，现将原DNA序列赋值给RNA，然后进行替换操作</span></span><br><span class="line"><span class="keyword">my</span> $RNA = $DNA1;</span><br><span class="line">$RNA =~ <span class="regexp">s/T/U/g</span>;                   <span class="comment"># =~ 为绑定操作符，只对$RNA进行相关操作</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"这是转录出的RNA:\n"</span>;</span><br><span class="line"><span class="keyword">print</span> $RNA,<span class="string">"\n"</span>;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">这是DNA编码链：</span><br><span class="line">AATTCCTT</span><br><span class="line"></span><br><span class="line">这是转录出的RNA:</span><br><span class="line">AAUUCCUU</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>这个程序的关键便是将RNA中的T替换为U：$RNA =~ s/T/U/g;  </p>
+<p>s：替换符号</p>
+<p>g：对全局进行操作</p>
+</blockquote>
+<p>下面为其他的替换操作符：</p>
+<p><img src="/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/tihuan.PNG" alt="kk"></p>
+<hr>
+<h2 id="四、反向互补"><a href="#四、反向互补" class="headerlink" title="四、反向互补"></a>四、反向互补</h2><p>考虑到 DNA 双螺旋中两条链的亲密关系，最好能编写这样一个程序：给出一条链，输出另一条链。这样的工作对许多生物信息学应用程序来说都是非常重要的一部分。比如，当在数据库中查询某条 DNA 时，常常也需要自动查询该 DNA 的反向互补序列，因为你手上的序列有可能是某个已知基因的负链，相关代码如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"><span class="keyword">use</span> warnings;</span><br><span class="line"><span class="keyword">use</span> utf8;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 反向互补</span></span><br><span class="line"><span class="keyword">my</span> $dna = <span class="string">'AAAATTTAAATTTCCCGGG'</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"这是dna：\n\n"</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"$dna\n\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 下面第一种操作是错误的</span></span><br><span class="line"><span class="keyword">my</span> $revcom = <span class="keyword">reverse</span> $dna;    <span class="comment"># reverse：取反。将DNA序列取反后赋值给$revcom</span></span><br><span class="line">$revcom =~ <span class="regexp">s/A/T/g</span>;           <span class="comment"># 先将$revcom中的A替换为T；    </span></span><br><span class="line">$revcom =~ <span class="regexp">s/T/A/g</span>;           <span class="comment"># 再将$revcom中的T替换为A；</span></span><br><span class="line">$revcom =~ <span class="regexp">s/C/G/g</span>;           <span class="comment"># 再将$revcom中的C替换为G；</span></span><br><span class="line">$revcom =~ <span class="regexp">s/G/C/g</span>;           <span class="comment"># 再将$revcom中的G替换为C；</span></span><br><span class="line"><span class="keyword">print</span> <span class="string">"这是互补dna：\n\n"</span>;   </span><br><span class="line"><span class="keyword">print</span> <span class="string">"$revcom\n\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"发现出错了，结果并不是我们想要的\n"</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"修改代码！\n"</span>;</span><br><span class="line"></span><br><span class="line"><span class="comment"># 正确的操作</span></span><br><span class="line"><span class="keyword">my</span> $revcom = <span class="keyword">reverse</span> $dna;</span><br><span class="line">$revcom =~ <span class="regexp">tr/ACGTacgt/TGCAtgca/</span>; <span class="comment"># 对序列中的碱基替换必须要同时替换。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">print</span> <span class="string">"下面是正确结果：\n"</span>;</span><br><span class="line"><span class="keyword">print</span> <span class="string">"$revcom\n"</span>;</span><br><span class="line"><span class="keyword">exit</span>;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line">这是dna：</span><br><span class="line">AAAATTTAAATTTCCCGGG</span><br><span class="line"></span><br><span class="line">这是互补dna：</span><br><span class="line">CCCCCCAAAAAAAAAAAAA</span><br><span class="line"></span><br><span class="line">发现出错了，结果并不是我们想要的</span><br><span class="line">修改代码！</span><br><span class="line"></span><br><span class="line">下面是正确结果：</span><br><span class="line">CCCGGGAAATTTAAATTTT</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>可以发现，这里用到的也是绑定操作符来进行操作，<strong>$revcom =~ tr/ACGTacgt/TGCAtgca/;</strong>  </p>
+<p>将 $revcom 中的 ACGTacgt 翻译为 TGCAtgca ，每个字符一一对应；</p>
+<p><strong>tr：</strong>翻译命令</p>
+</blockquote>
+<hr>
+<h2 id="五、从文件中读取数据"><a href="#五、从文件中读取数据" class="headerlink" title="五、从文件中读取数据"></a>五、从文件中读取数据</h2><p>在生信分析中，大多数时候我们需要从其他的文件（如fasta）中读取数据到 perl 脚本中，从而为我们所用，这里举一种简单的文件读取方法，代码如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl</span></span><br><span class="line"><span class="keyword">use</span> strict;</span><br><span class="line"><span class="keyword">use</span> warnings;</span><br><span class="line"><span class="keyword">use</span> utf8;</span><br><span class="line"></span><br><span class="line"><span class="comment"># a.txt 事先准备好的数据文件，内容为：gggggggggggggggggggg</span></span><br><span class="line"><span class="keyword">open</span>(FD,<span class="string">"a.txt"</span>) <span class="keyword">or</span> <span class="keyword">die</span>(<span class="string">"Can not open the file!$!n"</span>);</span><br><span class="line"><span class="comment"># FD为文件句柄，保存文件名a.txt </span></span><br><span class="line"><span class="comment"># 打开文件a.txt,打不开则输出错误信息。</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">my</span> $dna = &lt;FD&gt;; </span><br><span class="line"><span class="comment"># 将文件中的第一行数据赋值给变量$dna</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">close</span> FD;      <span class="comment"># 关闭文件</span></span><br><span class="line"><span class="keyword">print</span> $dna;</span><br></pre></td></tr></table></figure>
+
+<p>运行结果：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">gggggggggggggggggggg</span><br></pre></td></tr></table></figure>
+
+<hr>
+<h2 id="六、总结"><a href="#六、总结" class="headerlink" title="六、总结"></a><font color="red">六、总结</font></h2><p>最后总结一下，本篇涉及对字符串变量的一些操作，如赋值、拼接、替换、提取文件信息等。</p>
+<p><strong>1.拼接DNA有多种方法:</strong></p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>.$dna3=$dna1 . $dna2;</span><br><span class="line"><span class="number">2</span>.$dna3=$dna1$dna2;</span><br><span class="line"><span class="number">3</span>.<span class="keyword">print</span> $dna1,$dna2;</span><br><span class="line">...</span><br></pre></td></tr></table></figure>
+
+<p><strong>2.DNA转录（多个碱基替换）：</strong></p>
+<p>需同时进行替换，不能先替换一种碱基，在替换另一种，如DNA序列为 AAATTT，如果先替换A=&gt;T ，再替换T=&gt;A,那么结果为AAAAAA，并不是TTTAAA。</p>
+<p><strong>3.提取文件信息：</strong></p>
+<p>打开文件，提取完信息后必须关闭文件。</p>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
+      
+      
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
@@ -320,63 +380,128 @@
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-13T04:55:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-13</time>
-</a>
+  
+<nav id="article-nav">
+  
+    <a href="/2020/01/15/test%E4%BD%A0%E5%A5%BD%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          test你好（一）
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Perl语言学习（一）- 编写第一个Perl程序</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/">Perl语言学习（一）- 编写第一个Perl程序</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Perl</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程相关</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#序列与字符串"><span class="toc-number">1.</span> <span class="toc-text">序列与字符串</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、DNA的存储与输出"><span class="toc-number">1.1.</span> <span class="toc-text">一、DNA的存储与输出</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、拼接DNA片段"><span class="toc-number">1.2.</span> <span class="toc-text">二、拼接DNA片段</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、DNA的转录"><span class="toc-number">1.3.</span> <span class="toc-text">三、DNA的转录</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#四、反向互补"><span class="toc-number">1.4.</span> <span class="toc-text">四、反向互补</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#五、从文件中读取数据"><span class="toc-number">1.5.</span> <span class="toc-text">五、从文件中读取数据</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#六、总结"><span class="toc-number">1.6.</span> <span class="toc-text">六、总结</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
+        
+    </div>
+</aside>
+
+
+
   
   
-    </div></section>
   
 
-    
+  
+
+  
+
+  
 
 
           </div>
@@ -413,8 +538,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,

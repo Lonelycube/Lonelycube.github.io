@@ -6,19 +6,19 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>perl语言学习（一） | Lonelycube的博客</title>
+  <title>Perl语言学习（一）- 编写第一个Perl程序 | Lonelycube的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
   <meta name="description" content="Perl是典型的脚本语言，短小精悍，非常容易上手，尤其适合处理文本，数据，以及系统管理，其最大的优势就是处理字符串，而生物信息数据大多是将组织样本中的基因生物分子转为ATCGN这样的字符串来分析,因此在生物信息学领域中应用广泛。">
 <meta property="og:type" content="article">
-<meta property="og:title" content="perl语言学习（一）">
-<meta property="og:url" content="http://yoursite.com/2020/01/13/perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
+<meta property="og:title" content="Perl语言学习（一）- 编写第一个Perl程序">
+<meta property="og:url" content="http://yoursite.com/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="Lonelycube的博客">
 <meta property="og:description" content="Perl是典型的脚本语言，短小精悍，非常容易上手，尤其适合处理文本，数据，以及系统管理，其最大的优势就是处理字符串，而生物信息数据大多是将组织样本中的基因生物分子转为ATCGN这样的字符串来分析,因此在生物信息学领域中应用广泛。">
 <meta property="og:locale" content="zh_CN">
 <meta property="article:published_time" content="2020-01-13T04:55:06.000Z">
-<meta property="article:modified_time" content="2020-01-13T11:03:42.818Z">
+<meta property="article:modified_time" content="2020-02-15T01:49:49.111Z">
 <meta property="article:author" content="Lonelycube">
-<meta property="article:tag" content="perl">
+<meta property="article:tag" content="Perl">
 <meta property="article:tag" content="编程相关">
 <meta name="twitter:card" content="summary">
   
@@ -51,7 +51,10 @@
     <canvas id="anm-canvas" class="anm-canvas"></canvas>
     <div class="left-col" q-class="show:isShow">
       
-<div class="overlay" style="background: #4d4d4d"></div>
+<div class="overlay" style="background: #4d4d4d">
+
+
+</div>
 <div class="intrude-less">
 	<header id="header" class="inner">
 		<a href="/" class="profilepic">
@@ -188,14 +191,14 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            <article id="post-perl语言学习（一）" class="article article-type-post " itemscope itemprop="blogPost">
+            <article id="post-Perl语言学习（一）" class="article article-type-post " itemscope itemprop="blogPost">
   <div class="article-inner">
     
       <header class="article-header">
         
   
     <h1 class="article-title" itemprop="name">
-      perl语言学习（一）
+      Perl语言学习（一）- 编写第一个Perl程序
     </h1>
   
 
@@ -212,7 +215,7 @@
         <i class="fa fa-keyboard-o"></i>
 		<span class="icon-search" style="font-size:13px;color:#ff5151"></span>
         <span class="post-meta-item-text" style="color:grey;font-size:13px;">  字数统计: </span>
-        <span class="post-count" >1.4k</span>
+        <span class="post-count" >1.5k</span>
 		<span style="color:grey;font-size:12px;">字</span>
       </span>
     </span>
@@ -253,12 +256,41 @@
         </span>
 
 
-<a href="/2020/01/13/perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
+<a href="/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
   	<time datetime="2020-01-13T04:55:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-13</time>
 </a>
 		
       </header>
     
+	
+	<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#九九乘法表"><span class="toc-number">1.</span> <span class="toc-text">九九乘法表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、编写脚本"><span class="toc-number">1.1.</span> <span class="toc-text">一、编写脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、注意事项："><span class="toc-number">1.2.</span> <span class="toc-text">二、注意事项：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、拓展延伸："><span class="toc-number">1.3.</span> <span class="toc-text">三、拓展延伸：</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
+	
     <div class="article-entry" itemprop="articleBody">
       
         <blockquote>
@@ -266,38 +298,41 @@
 </blockquote>
 <a id="more"></a>
 
-<p>　　生物信息学主要用到3种语言：<strong>Perl</strong>、<strong>Python</strong>、<strong>R</strong>。我学习的第一门语言便是perl，如今perl语言可能不是特别流行，但它依然是处理数据的重要语言。由于自己最初学习时没有编程基础，学起来还是比较费劲的，自己掌握的也不够熟练，现在自己也不经常用，所以这里将之前学习过程中的笔记整理出来，以便自己能在将来用到 perl 时能尽快熟悉。</p>
-<p>　　下面便是我在学习perl语言时所整理的笔记，将通过一个个例子来学习，非常基础的东西就不写了，里面的例子大多和生信数据处理相关，笔记基于<strong>《<a href="http://www.allitebooks.org/beginning-perl-for-bioinformatics/" target="_blank" rel="noopener">Beginning Perl for Bioinformatics</a>》</strong>，环境基于<strong>linux</strong>系统。</p>
-<p>　　整份笔记共包括七大篇。本篇为起始篇，以九九乘法表为例子，初步了解perl脚本的编写，以及代码格式化等相关的问题。</p>
-<h2 id="一、九九乘法表"><a href="#一、九九乘法表" class="headerlink" title="一、九九乘法表"></a>一、九九乘法表</h2><p>一个很简单但又是一个很基础的例子，主要是利用了 <code>for 循环</code> ,这里给出两例参考代码，如下：</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl </span></span><br><span class="line"><span class="comment">#代码1</span></span><br><span class="line"><span class="keyword">use</span> strict;     <span class="comment"># 严格模式，检查不合理语法错误</span></span><br><span class="line"><span class="keyword">use</span> warnings;   <span class="comment"># 使用警告 </span></span><br><span class="line"><span class="keyword">use</span> utf8;   <span class="comment">#使用utf8 编译告诉perl解析器 允许UTF-8在程序文本在当前的词法范围</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">my</span> $i = <span class="number">1</span> ; $i &lt;= <span class="number">9</span> ; $i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">my</span> $j = <span class="number">1</span> ; $j &lt;= $i ; $j++ ) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"$j x $i = "</span> . $i * $j;</span><br><span class="line">        <span class="keyword">if</span>   ( $j == $i ) &#123; <span class="keyword">print</span> <span class="string">"\n"</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span>              &#123; <span class="keyword">print</span> <span class="string">"\t"</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">--------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#!/usr/bin/perl </span></span><br><span class="line"><span class="comment">#代码2</span></span><br><span class="line"><span class="keyword">use</span> strict;     <span class="comment"># 严格模式，检查不合理语法错误</span></span><br><span class="line"><span class="keyword">use</span> warnings;   <span class="comment"># 使用警告</span></span><br><span class="line"><span class="keyword">use</span> utf8;  <span class="comment">#使用utf8 编译告诉perl解析器 允许UTF-8在程序文本在当前的词法范围</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">my</span> $i = <span class="number">1</span> ; $i &lt;= <span class="number">9</span> ; $i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">my</span> $j = <span class="number">1</span> ; $j &lt;= $i ; $j++ ) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"$j"</span> . <span class="string">"x"</span> . <span class="string">"$i"</span> . <span class="string">"="</span> . $i * $j;</span><br><span class="line">        <span class="keyword">if</span>   ( $j == $i ) &#123; <span class="keyword">print</span> <span class="string">"\n"</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span>              &#123; <span class="keyword">print</span> <span class="string">"\t"</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<p>　　生物信息学主要用到3种语言：<strong>Perl</strong>、<strong>Python</strong>、<strong>R</strong>。我学习的第一门语言便是Perl，如今Perl语言可能不是特别流行，但它依然是处理数据的重要语言。由于自己最初学习时没有编程基础，学起来还是比较费劲的，自己掌握的也不够熟练，现在自己也不经常用，所以这里将之前学习过程中的笔记整理出来，以便自己能在将来用到 Perl 时能尽快熟悉。</p>
+<p>　　下面便是我在学习Perl语言时所整理的笔记，将通过一个个实验、例子来学习，非常基础的东西就不写了，里面的例子大多和生信数据处理相关，笔记基于<strong>《<a href="http://www.allitebooks.org/beginning-Perl-for-bioinformatics/" target="_blank" rel="noopener">Beginning Perl for Bioinformatics</a>》</strong>，环境基于<strong>linux</strong>系统（自带Perl）。</p>
+<p>　　整份笔记共包括七大篇。本篇为起始篇，以九九乘法表为例子，初步了解Perl脚本的编写，以及代码格式化等相关的问题。</p>
+<h1 id="九九乘法表"><a href="#九九乘法表" class="headerlink" title="九九乘法表"></a>九九乘法表</h1><h2 id="一、编写脚本"><a href="#一、编写脚本" class="headerlink" title="一、编写脚本"></a>一、编写脚本</h2><p>一个很简单但又是一个很基础的例子，主要是利用了 <code>for 循环</code> ,这里给出两例参考代码，如下：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/Perl   #命令解释，告诉运行 Linux 的计算机，这是一个Perl程序。</span></span><br><span class="line"><span class="comment">#代码1</span></span><br><span class="line"><span class="keyword">use</span> strict;       <span class="comment"># 严格模式，检查不合理语法错误</span></span><br><span class="line"><span class="keyword">use</span> warnings;     <span class="comment"># 使用警告 </span></span><br><span class="line"><span class="keyword">use</span> utf8;   <span class="comment">#使用utf8 编译告诉Perl解析器 允许UTF-8在程序文本在当前的词法范围</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">my</span> $i = <span class="number">1</span> ; $i &lt;= <span class="number">9</span> ; $i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">my</span> $j = <span class="number">1</span> ; $j &lt;= $i ; $j++ ) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"$j x $i = "</span> . $i * $j;</span><br><span class="line">        <span class="keyword">if</span>   ( $j == $i ) &#123; <span class="keyword">print</span> <span class="string">"\n"</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span>              &#123; <span class="keyword">print</span> <span class="string">"\t"</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">--------------------------------------------------------------------------</span><br><span class="line"><span class="comment">#!/usr/bin/Perl </span></span><br><span class="line"><span class="comment">#代码2</span></span><br><span class="line"><span class="keyword">use</span> strict;     <span class="comment"># 严格模式，检查不合理语法错误</span></span><br><span class="line"><span class="keyword">use</span> warnings;   <span class="comment"># 使用警告</span></span><br><span class="line"><span class="keyword">use</span> utf8;  <span class="comment">#使用utf8 编译告诉Perl解析器 允许UTF-8在程序文本在当前的词法范围</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">my</span> $i = <span class="number">1</span> ; $i &lt;= <span class="number">9</span> ; $i++ ) &#123;</span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">my</span> $j = <span class="number">1</span> ; $j &lt;= $i ; $j++ ) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"$j"</span> . <span class="string">"x"</span> . <span class="string">"$i"</span> . <span class="string">"="</span> . $i * $j;</span><br><span class="line">        <span class="keyword">if</span>   ( $j == $i ) &#123; <span class="keyword">print</span> <span class="string">"\n"</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span>              &#123; <span class="keyword">print</span> <span class="string">"\t"</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p><strong>运行结果如下：</strong></p>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>*<span class="number">1</span>=<span class="number">1</span></span><br><span class="line"><span class="number">1</span>*<span class="number">2</span>=<span class="number">2</span>   <span class="number">2</span>*<span class="number">2</span>=<span class="number">4</span></span><br><span class="line"><span class="number">1</span>*<span class="number">3</span>=<span class="number">3</span>   <span class="number">2</span>*<span class="number">3</span>=<span class="number">6</span>   <span class="number">3</span>*<span class="number">3</span>=<span class="number">9</span></span><br><span class="line"><span class="number">1</span>*<span class="number">4</span>=<span class="number">4</span>   <span class="number">2</span>*<span class="number">4</span>=<span class="number">8</span>   <span class="number">3</span>*<span class="number">4</span>=<span class="number">12</span>  <span class="number">4</span>*<span class="number">4</span>=<span class="number">16</span></span><br><span class="line"><span class="number">1</span>*<span class="number">5</span>=<span class="number">5</span>   <span class="number">2</span>*<span class="number">5</span>=<span class="number">10</span>  <span class="number">3</span>*<span class="number">5</span>=<span class="number">15</span>  <span class="number">4</span>*<span class="number">5</span>=<span class="number">20</span>  <span class="number">5</span>*<span class="number">5</span>=<span class="number">25</span></span><br><span class="line"><span class="number">1</span>*<span class="number">6</span>=<span class="number">6</span>   <span class="number">2</span>*<span class="number">6</span>=<span class="number">12</span>  <span class="number">3</span>*<span class="number">6</span>=<span class="number">18</span>  <span class="number">4</span>*<span class="number">6</span>=<span class="number">24</span>  <span class="number">5</span>*<span class="number">6</span>=<span class="number">30</span>  <span class="number">6</span>*<span class="number">6</span>=<span class="number">36</span></span><br><span class="line"><span class="number">1</span>*<span class="number">7</span>=<span class="number">7</span>   <span class="number">2</span>*<span class="number">7</span>=<span class="number">14</span>  <span class="number">3</span>*<span class="number">7</span>=<span class="number">21</span>  <span class="number">4</span>*<span class="number">7</span>=<span class="number">28</span>  <span class="number">5</span>*<span class="number">7</span>=<span class="number">35</span>  <span class="number">6</span>*<span class="number">7</span>=<span class="number">42</span>  <span class="number">7</span>*<span class="number">7</span>=<span class="number">49</span></span><br><span class="line"><span class="number">1</span>*<span class="number">8</span>=<span class="number">8</span>   <span class="number">2</span>*<span class="number">8</span>=<span class="number">16</span>  <span class="number">3</span>*<span class="number">8</span>=<span class="number">24</span>  <span class="number">4</span>*<span class="number">8</span>=<span class="number">32</span>  <span class="number">5</span>*<span class="number">8</span>=<span class="number">40</span>  <span class="number">6</span>*<span class="number">8</span>=<span class="number">48</span>  <span class="number">7</span>*<span class="number">8</span>=<span class="number">56</span>  <span class="number">8</span>*<span class="number">8</span>=<span class="number">64</span></span><br><span class="line"><span class="number">1</span>*<span class="number">9</span>=<span class="number">9</span>   <span class="number">2</span>*<span class="number">9</span>=<span class="number">18</span>  <span class="number">3</span>*<span class="number">9</span>=<span class="number">27</span>  <span class="number">4</span>*<span class="number">9</span>=<span class="number">36</span>  <span class="number">5</span>*<span class="number">9</span>=<span class="number">45</span>  <span class="number">6</span>*<span class="number">9</span>=<span class="number">54</span>  <span class="number">7</span>*<span class="number">9</span>=<span class="number">63</span>  <span class="number">8</span>*<span class="number">9</span>=<span class="number">72</span>  <span class="number">9</span>*<span class="number">9</span>=<span class="number">81</span></span><br></pre></td></tr></table></figure>
 
-<p><strong>注：</strong>很多人在第一次写代码时，写的都很乱，这不利于我们后续的调试和修改bug，因此这里提供一种格式化perl代码的方法，能将杂乱的代码变得清晰整洁。</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.安装perltidy</span></span><br><span class="line">sudo apt install perltidy</span><br><span class="line"><span class="comment">#sudo apt-get install perltidy</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2.保留原始文件， 格式化后的文件为*.tdy</span></span><br><span class="line">perltidy script.pl</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.备份原始文件为*.bak， 格式化后的文件使用原文件名</span></span><br><span class="line">perltidy -b script.pl</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.perltidy使用帮助</span></span><br><span class="line">man perltidy</span><br><span class="line">perltidy -h</span><br></pre></td></tr></table></figure>
+<p><strong>注：</strong>很多人在第一次写代码时，写的都很乱，这不利于我们后续的调试和修改bug，因此这里提供一种格式化Perl代码的方法，能将杂乱的代码变得清晰整洁。</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#1.安装Perltidy</span></span><br><span class="line">sudo apt install Perltidy</span><br><span class="line"><span class="comment">#sudo apt-get install Perltidy</span></span><br><span class="line"></span><br><span class="line"><span class="comment">#2.保留原始文件， 格式化后的文件为*.tdy</span></span><br><span class="line">Perltidy script.pl</span><br><span class="line"></span><br><span class="line"><span class="comment">#3.备份原始文件为*.bak， 格式化后的文件使用原文件名</span></span><br><span class="line">Perltidy -b script.pl</span><br><span class="line"></span><br><span class="line"><span class="comment">#4.Perltidy使用帮助</span></span><br><span class="line">man Perltidy</span><br><span class="line">Perltidy -h</span><br></pre></td></tr></table></figure>
 
 <hr>
 <h2 id="二、注意事项："><a href="#二、注意事项：" class="headerlink" title="二、注意事项："></a>二、注意事项：</h2><ol>
-<li><code>use strict</code>  :是提供给Perl编译器的指令，告诉编译器，如果perl代码中有不好的编码风格，那么提示编译失败。</li>
+<li><code>use strict</code>  :是提供给Perl编译器的指令，告诉编译器，如果Perl代码中有不好的编码风格，那么提示编译失败。</li>
 </ol>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#使用规范</span><br><span class="line">1.每一行perl语句要以英文分号;结尾</span><br><span class="line">2.所有变量要加上my来控制变量的作用域范围</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">#使用规范</span><br><span class="line">1.每一行Perl语句要以英文分号;结尾</span><br><span class="line">2.所有变量要加上my来控制变量的作用域范围</span><br></pre></td></tr></table></figure>
 
 <ol start="2">
 <li><code>for循环</code>:用于多次执行一个语句序列，简化管理循环变量的代码。</li>
 </ol>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#语法格式：</span></span><br><span class="line"><span class="keyword">for</span> ( init; condition; increment )&#123;</span><br><span class="line">   statement(<span class="keyword">s</span>);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment"># init 会首先被执行，且只会执行一次。</span></span><br><span class="line"><span class="comment"># 接下来，会判断 condition，如果为 true，则执行循环主体</span></span><br><span class="line"><span class="comment"># 执行完 for 循环主体后，控制流会跳回上面的 increment 语句</span></span><br><span class="line"><span class="comment"># 条件再次被判断。如果为 true，则执行循环，在条件变为 false 时，for 循环终止。</span></span><br></pre></td></tr></table></figure>
 
+<ol start="3">
+<li>在 Perl 中，语句以分号（;）结尾，不能省略。</li>
+</ol>
 <hr>
-<h2 id="三、拓展延伸："><a href="#三、拓展延伸：" class="headerlink" title="三、拓展延伸："></a>三、拓展延伸：</h2><p>前面成功编写了一个可以输出九九乘法表的perl脚本，那如何使输出的形式与原来的形式对称（即倒三角）？ 很简单，只需修改for循环中的部分代码即可：</p>
-<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/perl </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> strict;     <span class="comment"># 严格模式，检查不合理语法错误</span></span><br><span class="line"><span class="keyword">use</span> warnings;   <span class="comment"># 使用警告</span></span><br><span class="line"><span class="keyword">use</span> utf8;  <span class="comment">#使用utf8 编译告诉perl解析器 允许UTF-8在程序文本在当前的词法范围</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">my</span> $i = <span class="number">9</span> ; $i &gt;= <span class="number">1</span> ; $i-- ) &#123;          <span class="comment">#修改for中条件</span></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">my</span> $j = <span class="number">1</span> ; $j &lt;= $i ; $j++ ) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"$j*$i="</span> . $i * $j;             <span class="comment">#调换顺序</span></span><br><span class="line">        <span class="keyword">if</span>   ( $j == $i ) &#123; <span class="keyword">print</span> <span class="string">"\n"</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span>              &#123; <span class="keyword">print</span> <span class="string">"\t"</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="三、拓展延伸："><a href="#三、拓展延伸：" class="headerlink" title="三、拓展延伸："></a>三、拓展延伸：</h2><p>前面成功编写了一个可以输出九九乘法表的Perl脚本，那如何使输出的形式与原来的形式对称（即倒三角）？ 很简单，只需修改for循环中的部分代码即可：</p>
+<figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#!/usr/bin/Perl </span></span><br><span class="line"></span><br><span class="line"><span class="keyword">use</span> strict;     <span class="comment"># 严格模式，检查不合理语法错误</span></span><br><span class="line"><span class="keyword">use</span> warnings;   <span class="comment"># 使用警告</span></span><br><span class="line"><span class="keyword">use</span> utf8;  <span class="comment">#使用utf8 编译告诉Perl解析器 允许UTF-8在程序文本在当前的词法范围</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">for</span> ( <span class="keyword">my</span> $i = <span class="number">9</span> ; $i &gt;= <span class="number">1</span> ; $i-- ) &#123;          <span class="comment">#修改for中条件</span></span><br><span class="line">    <span class="keyword">for</span> ( <span class="keyword">my</span> $j = <span class="number">1</span> ; $j &lt;= $i ; $j++ ) &#123;</span><br><span class="line">        <span class="keyword">print</span> <span class="string">"$j*$i="</span> . $i * $j;             <span class="comment">#调换顺序</span></span><br><span class="line">        <span class="keyword">if</span>   ( $j == $i ) &#123; <span class="keyword">print</span> <span class="string">"\n"</span>; &#125;</span><br><span class="line">        <span class="keyword">else</span>              &#123; <span class="keyword">print</span> <span class="string">"\t"</span>; &#125;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
 
 <p>运行结果：</p>
 <figure class="highlight perl"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="number">1</span>*<span class="number">9</span>=<span class="number">9</span>   <span class="number">2</span>*<span class="number">9</span>=<span class="number">18</span>  <span class="number">3</span>*<span class="number">9</span>=<span class="number">27</span>  <span class="number">4</span>*<span class="number">9</span>=<span class="number">36</span>  <span class="number">5</span>*<span class="number">9</span>=<span class="number">45</span>  <span class="number">6</span>*<span class="number">9</span>=<span class="number">54</span>  <span class="number">7</span>*<span class="number">9</span>=<span class="number">63</span>  <span class="number">8</span>*<span class="number">9</span>=<span class="number">72</span>  <span class="number">9</span>*<span class="number">9</span>=<span class="number">81</span></span><br><span class="line"><span class="number">1</span>*<span class="number">8</span>=<span class="number">8</span>   <span class="number">2</span>*<span class="number">8</span>=<span class="number">16</span>  <span class="number">3</span>*<span class="number">8</span>=<span class="number">24</span>  <span class="number">4</span>*<span class="number">8</span>=<span class="number">32</span>  <span class="number">5</span>*<span class="number">8</span>=<span class="number">40</span>  <span class="number">6</span>*<span class="number">8</span>=<span class="number">48</span>  <span class="number">7</span>*<span class="number">8</span>=<span class="number">56</span>  <span class="number">8</span>*<span class="number">8</span>=<span class="number">64</span></span><br><span class="line"><span class="number">1</span>*<span class="number">7</span>=<span class="number">7</span>   <span class="number">2</span>*<span class="number">7</span>=<span class="number">14</span>  <span class="number">3</span>*<span class="number">7</span>=<span class="number">21</span>  <span class="number">4</span>*<span class="number">7</span>=<span class="number">28</span>  <span class="number">5</span>*<span class="number">7</span>=<span class="number">35</span>  <span class="number">6</span>*<span class="number">7</span>=<span class="number">42</span>  <span class="number">7</span>*<span class="number">7</span>=<span class="number">49</span></span><br><span class="line"><span class="number">1</span>*<span class="number">6</span>=<span class="number">6</span>   <span class="number">2</span>*<span class="number">6</span>=<span class="number">12</span>  <span class="number">3</span>*<span class="number">6</span>=<span class="number">18</span>  <span class="number">4</span>*<span class="number">6</span>=<span class="number">24</span>  <span class="number">5</span>*<span class="number">6</span>=<span class="number">30</span>  <span class="number">6</span>*<span class="number">6</span>=<span class="number">36</span></span><br><span class="line"><span class="number">1</span>*<span class="number">5</span>=<span class="number">5</span>   <span class="number">2</span>*<span class="number">5</span>=<span class="number">10</span>  <span class="number">3</span>*<span class="number">5</span>=<span class="number">15</span>  <span class="number">4</span>*<span class="number">5</span>=<span class="number">20</span>  <span class="number">5</span>*<span class="number">5</span>=<span class="number">25</span></span><br><span class="line"><span class="number">1</span>*<span class="number">4</span>=<span class="number">4</span>   <span class="number">2</span>*<span class="number">4</span>=<span class="number">8</span>   <span class="number">3</span>*<span class="number">4</span>=<span class="number">12</span>  <span class="number">4</span>*<span class="number">4</span>=<span class="number">16</span></span><br><span class="line"><span class="number">1</span>*<span class="number">3</span>=<span class="number">3</span>   <span class="number">2</span>*<span class="number">3</span>=<span class="number">6</span>   <span class="number">3</span>*<span class="number">3</span>=<span class="number">9</span></span><br><span class="line"><span class="number">1</span>*<span class="number">2</span>=<span class="number">2</span>   <span class="number">2</span>*<span class="number">2</span>=<span class="number">4</span></span><br><span class="line"><span class="number">1</span>*<span class="number">1</span>=<span class="number">1</span></span><br></pre></td></tr></table></figure>
 
 <hr>
-<p>通过上述例子的学习，我们已经能够初步写出一个简单完整的perl脚本了，但这仅仅是入门，后续将会更深入的学习。</p>
+<p>通过上述例子的学习，我们已经能够初步写出一个简单完整的Perl脚本了，但这仅仅是入门，后续将会更深入的学习。</p>
 <p><strong>编程的学习不是一蹴而就的，需要自己不断的练习，去敲，切莫3分钟热度！</strong></p>
 
       
@@ -312,7 +347,7 @@
 		<ul class="article-tag-list">
 			 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">perl</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Perl</a>
         		</li>
       		 
         		<li class="article-tag-list-item">
@@ -372,7 +407,7 @@
     <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
     <p>扫一扫，分享到微信</p>
     <div class="wx-qrcode">
-      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/13/perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
     </div>
 </div>
 
@@ -384,6 +419,20 @@
 </article>
 
   
+<nav id="article-nav">
+  
+    <a href="/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          Perl语言学习（二）- 序列与字符串
+        
+      </div>
+    </a>
+  
+  
+</nav>
+
 
 <aside class="wrap-side-operation">
     <div class="mod-side-operation">
@@ -405,7 +454,7 @@
                 </span>
                 <span class="tooltip-content">
                     <div class="toc-article">
-                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、九九乘法表"><span class="toc-number">1.</span> <span class="toc-text">一、九九乘法表</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、注意事项："><span class="toc-number">2.</span> <span class="toc-text">二、注意事项：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、拓展延伸："><span class="toc-number">3.</span> <span class="toc-text">三、拓展延伸：</span></a></li></ol>
+                    <ol class="toc"><li class="toc-item toc-level-1"><a class="toc-link" href="#九九乘法表"><span class="toc-number">1.</span> <span class="toc-text">九九乘法表</span></a><ol class="toc-child"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、编写脚本"><span class="toc-number">1.1.</span> <span class="toc-text">一、编写脚本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#二、注意事项："><span class="toc-number">1.2.</span> <span class="toc-text">二、注意事项：</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#三、拓展延伸："><span class="toc-number">1.3.</span> <span class="toc-text">三、拓展延伸：</span></a></li></ol></li></ol>
                     </div>
                 </span>
             </div>
@@ -443,14 +492,14 @@
   </div>
   
         <!-- 不蒜子统计 -->
-        <span id="busuanzi_container_site_pv">
+        <span>
                 本站总访问量<span id="busuanzi_value_site_pv"></span>次
         </span>
         <span class="post-meta-divider">|</span>
-        <span id="busuanzi_container_site_uv" style='display:none'>
+        <span>
                 本站访客数<span id="busuanzi_value_site_uv"></span>人
         </span>
-        <script async src="/busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   
 
 </footer>
@@ -534,11 +583,23 @@ return o(i(t),arguments.length<2?void 0:u(arguments[1]))}})},function(t,n,r){var
           <ul class="article-tag-list" q-show="showTags">
              
               <li class="article-tag-list-item">
-                <a href="javascript:void(0)" class="js-tag color5">perl</a>
+                <a href="javascript:void(0)" class="js-tag color5">Perl</a>
               </li>
              
               <li class="article-tag-list-item">
                 <a href="javascript:void(0)" class="js-tag color5">编程相关</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color2">R</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color5">perl</a>
+              </li>
+             
+              <li class="article-tag-list-item">
+                <a href="javascript:void(0)" class="js-tag color3">ss</a>
               </li>
             
             <div class="clearfix"></div>

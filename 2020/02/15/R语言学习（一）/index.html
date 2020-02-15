@@ -6,14 +6,20 @@
   <meta name="renderer" content="webkit">
   <meta http-equiv="X-UA-Compatible" content="IE=edge" >
   <link rel="dns-prefetch" href="http://yoursite.com">
-  <title>Archives: 2020/1 | Lonelycube的博客</title>
+  <title>R语言学习（一）- 基础语法 | Lonelycube的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Lonelycube的博客">
-<meta property="og:url" content="http://yoursite.com/archives/2020/01/index.html">
+  <meta name="description" content="一、基础语法R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。">
+<meta property="og:type" content="article">
+<meta property="og:title" content="R语言学习（一）- 基础语法">
+<meta property="og:url" content="http://yoursite.com/2020/02/15/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/index.html">
 <meta property="og:site_name" content="Lonelycube的博客">
+<meta property="og:description" content="一、基础语法R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。">
 <meta property="og:locale" content="zh_CN">
+<meta property="article:published_time" content="2020-02-15T01:43:43.000Z">
+<meta property="article:modified_time" content="2020-02-15T01:50:20.293Z">
 <meta property="article:author" content="Lonelycube">
+<meta property="article:tag" content="编程相关">
+<meta property="article:tag" content="R">
 <meta name="twitter:card" content="summary">
   
     <link rel="alternative" href="/atom.xml" title="Lonelycube的博客" type="application/atom+xml">
@@ -185,198 +191,265 @@
             <canvas data-colors="#eaeaea" data-sectionHeight="100" data-contentId="js-content" id="myCanvas1" class="anm-canvas"></canvas>
           </div>
           <div id="js-content" class="content-ll">
-            
-  
-  
+            <article id="post-R语言学习（一）" class="article article-type-post " itemscope itemprop="blogPost">
+  <div class="article-inner">
     
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      R语言学习（一）- 基础语法
+    </h1>
+  
+
+		
+	
+		
+		<!-- 需要添加的位置 -->
+        <!-- 开始添加字数统计-->
+        
+		 <br/>
+          <a style="margin-top:0px;font-size:13px;">
+    <span class="post-time">
+      <span class="post-meta-item-icon">
+        <i class="fa fa-keyboard-o"></i>
+		<span class="icon-search" style="font-size:13px;color:#ff5151"></span>
+        <span class="post-meta-item-text" style="color:grey;font-size:13px;">  字数统计: </span>
+        <span class="post-count" >1.1k</span>
+		<span style="color:grey;font-size:12px;">字</span>
+      </span>
+    </span>
+
+    <span class="post-time">
+      &nbsp;  &nbsp;
+      <span class="post-meta-item-icon">
+        <i class="fa fa-hourglass-half"></i>
+		<span class="icon-clock" style="font-size:13px;color:#00b3b3"></span>
+        <span class="post-meta-item-text" style="color:grey;font-size:13px;">  阅读时长: </span>
+        <span class="post-count">4</span>
+		<span style="color:grey;font-size:13px;">分</span>
+      </span>
+    </span>
+</a>
+
+          
+        <!-- 添加完成 -->
+		
+		<!--显示阅读次数-->
+		
+		
+			<a class="cloud-tie-join-count" href="javascript:void(0);" style="color:gray;font-size:14px;"> &nbsp;  &nbsp;
+			<span class="icon-list" style="font-size:13px;color:green;font-weight:bold "></span>
+			
+			<span id="busuanzi_container_page_pv" style="color:grey;font-size:13px;">
+				阅读数: <span id="busuanzi_value_page_pv"></span>次 &nbsp;&nbsp;
+			</span>
+			</a>
+		
+		<!--显示阅读次数完毕-->
+
+        
+        
+        <!-- 不蒜子统计 -->
+        <span id="busuanzi_container_page_pv" style='display:none' class="archive-article-date">
+              <i class="icon-smile icon"></i> 阅读数：<span id="busuanzi_value_page_pv"></span>次
+        </span>
+
+
+<a href="/2020/02/15/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
+  	<time datetime="2020-02-15T01:43:43.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-02-15</time>
+</a>
+		
+      </header>
     
+	
+	<!-- 目录内容 -->
+
+    <p class="show-toc-btn" id="show-toc-btn" onclick="showToc();" style="display:none">
+          <span class="btn-bg"></span>
+          <span class="btn-text">文章导航</span>
+          </p>
+	<div id="toc-article" class="toc-article">
+	    <span id="toc-close" class="toc-close" title="隐藏导航" onclick="showBtn();">×</span>
+		<strong class="toc-title">文章目录</strong>
+           <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基础语法"><span class="toc-number">1.</span> <span class="toc-text">一、基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-基础命令"><span class="toc-number">1.1.</span> <span class="toc-text">1.基础命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-赋值"><span class="toc-number">1.2.</span> <span class="toc-text">2.赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数据的读取与保存"><span class="toc-number">1.3.</span> <span class="toc-text">3.数据的读取与保存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-简单的操作，初步认识R语言"><span class="toc-number">1.4.</span> <span class="toc-text">4.简单的操作，初步认识R语言</span></a></li></ol></li></ol>
+         </div>
+   <script type="text/javascript">
+	function showToc(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:block");
+		show_toc_btn.setAttribute("style","display:none");
+		};
+	function showBtn(){
+		var toc_article = document.getElementById("toc-article");
+		var show_toc_btn = document.getElementById("show-toc-btn");
+		toc_article.setAttribute("style","display:none");
+		show_toc_btn.setAttribute("style","display:block");
+		};
+   </script>
+      
+<!-- 目录内容结束 -->
+	
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="一、基础语法"><a href="#一、基础语法" class="headerlink" title="一、基础语法"></a>一、基础语法</h2><p>R是用于统计分析、绘图的语言和操作环境。R是属于GNU系统的一个自由、免费、源代码开放的软件，它是一个用于统计计算和统计制图的优秀工具。</p>
+<a id="more"></a>
+
+<h3 id="1-基础命令"><a href="#1-基础命令" class="headerlink" title="1.基础命令"></a>1.基础命令</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">getwd()                        <span class="comment">#获取当前工作目录</span></span><br><span class="line">setwd(<span class="string">"F:/R/R_learn"</span>)          <span class="comment">#设置工作目录</span></span><br><span class="line"></span><br><span class="line">install.packages(<span class="string">'ggplot2'</span>)    <span class="comment">#安装R包</span></span><br><span class="line"><span class="keyword">library</span>(ggplot2)               <span class="comment">#载入R包</span></span><br><span class="line">update.packages()              <span class="comment">#更新R包</span></span><br><span class="line"><span class="keyword">library</span>()                      <span class="comment">#查看已经安装的包</span></span><br><span class="line"><span class="keyword">detach</span>(<span class="string">"package:packagename"</span>)  <span class="comment">#卸载加载的包（注意不是删除包）</span></span><br><span class="line">remove.packages(<span class="string">"packagename"</span>) <span class="comment">#删除R包</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">help(mean)     <span class="comment">#查看帮助</span></span><br><span class="line">?mean          <span class="comment">#查看帮助</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="2-赋值"><a href="#2-赋值" class="headerlink" title="2.赋值"></a>2.赋值</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># R赋值采用&lt;-或者-&gt;或者=，建议采用标准的第一个。</span></span><br><span class="line"><span class="comment"># 因为&lt;-敲起来比等号要麻烦，且大部分情况下两者是等价的，所以通常就愉懒依旧用”=”来赋值。但要切记两者在某些时候是有区别的。字面上的解释，可以认为”&lt;-”是赋值，”=”是传值。在函数调用中，func(x=1)与func(x&lt;-1)是有区别的，前者调用完后变量x不会被保留，而后者会在工作区里保留变量x=1。再如length(x=seq(1,10))计算完成后x不会被保留，而length(x&lt;-seq(1,10))计算完后你会在工作区里发现x这个变量。</span></span><br><span class="line"><span class="comment"># 由于R中内置了同名函数c()，最好不要在编码时使用c作为对象名</span></span><br><span class="line"></span><br><span class="line">a &lt;- <span class="number">133</span></span><br><span class="line"><span class="string">"hello"</span> -&gt; b  <span class="comment">#注意无论哪种写法，大于或小于号都是指向变量名</span></span><br><span class="line">d = <span class="string">'This'</span>    <span class="comment">#不建议这么用，有可能会造成问题</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="3-数据的读取与保存"><a href="#3-数据的读取与保存" class="headerlink" title="3.数据的读取与保存"></a>3.数据的读取与保存</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment"># 通用读取</span></span><br><span class="line">read.table(file,sep,hesder = <span class="literal">TRUE</span>)    </span><br><span class="line"><span class="comment">#file 文件路径  </span></span><br><span class="line"><span class="comment">#sep 分隔符 常见空白分隔符有：空格，制表符，换行符,即sep=" "; sep = "\t"; sep = "\n"</span></span><br><span class="line"><span class="comment">#header 第一行是不是列名（是列名则导入的时候填TRUE；默认值是FALSE，即把第一行算作数据）</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取csv</span></span><br><span class="line">data &lt;- read.csv(<span class="string">'F:/table1_1.csv'</span>) </span><br><span class="line">head(data,<span class="number">6</span>)                   <span class="comment">#读取前 6行的数据</span></span><br><span class="line"><span class="keyword">attach</span>(data)                   <span class="comment">#简单来说，可把列名直接当做变量用，把数据放到R search里</span></span><br><span class="line"><span class="keyword">detach</span>(mtcars)                 <span class="comment">#解除之前的attach操作，把数据移除R search</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取 Excel数据</span></span><br><span class="line"><span class="keyword">library</span>(xlsx)                  <span class="comment">#需要安装 xlsx 包</span></span><br><span class="line">data &lt;- read.xlsx(<span class="string">"file"</span>,n)    <span class="comment">#n 为要导入工作表的序号</span></span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取 spss数据</span></span><br><span class="line"><span class="keyword">library</span>(foregin)               <span class="comment">#已经默认安装</span></span><br><span class="line">data &lt;- read.spss(<span class="string">"file"</span>,use.value.labels=<span class="literal">TRUE</span>,as.data.frame=<span class="literal">TRUE</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 读取 R格式数据</span></span><br><span class="line">data &lt;- load(<span class="string">'F:/r1.RData'</span>)</span><br><span class="line"></span><br><span class="line"><span class="comment"># 写入文件</span></span><br><span class="line">write.table(data,file,sep)</span><br><span class="line">write.csv(data,file)           <span class="comment">#保存为csv格式</span></span><br><span class="line">write.csv(data3,<span class="string">'save.csv'</span>,row.names = <span class="literal">FALSE</span>)    <span class="comment">#保存为csv格式，并删去行号</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="4-简单的操作，初步认识R语言"><a href="#4-简单的操作，初步认识R语言" class="headerlink" title="4.简单的操作，初步认识R语言"></a>4.简单的操作，初步认识R语言</h3><figure class="highlight r"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line">v = c(<span class="number">1</span>,<span class="number">4</span>,<span class="number">4</span>,<span class="number">3</span>,<span class="number">2</span>,<span class="number">2</span>,<span class="number">3</span>)   <span class="comment">#c()创建一个数字向量，并赋值给 v </span></span><br><span class="line"></span><br><span class="line">v[c(<span class="number">2</span>,<span class="number">3</span>,<span class="number">4</span>)]      <span class="comment">#返回变量v中的第2，3，4个元素</span></span><br><span class="line">v[<span class="number">2</span>:<span class="number">4</span>]           <span class="comment">#返回变量v中的第2-4个元素</span></span><br><span class="line">v[c(<span class="number">2</span>,<span class="number">4</span>,<span class="number">3</span>)]      <span class="comment">#返回变量v中的第2，4，3个元素</span></span><br><span class="line">v[-<span class="number">2</span>]            <span class="comment">#返回时删去第2个元素，变量v不变</span></span><br><span class="line">v[-<span class="number">2</span>:-<span class="number">4</span>]         <span class="comment">#返回时删去第2-4个元素，变量v不变</span></span><br><span class="line">v[v&lt;<span class="number">3</span>]           <span class="comment">#返回变量v中所有小于3的数</span></span><br><span class="line">which(v==<span class="number">3</span>)      <span class="comment">#返回变量v中等于3的元素的位置</span></span><br><span class="line">which.max(v)     <span class="comment">#返回变量v中最大的元素的位置（第一个最大值）</span></span><br><span class="line">which.min(v)     <span class="comment">#返回变量v中最小的元素的位置（第一个最小值）</span></span><br><span class="line"></span><br><span class="line">set.seed(<span class="number">250</span>)    <span class="comment">#用于设定随机数种子，一个特定的种子可以产生一个特定的伪随机序列</span></span><br><span class="line"><span class="comment">#这个种子是R内部的设定好的，在任何用户的R中，第一次的调用结果是一样的，便于模拟的可重复</span></span><br><span class="line">a = runif(<span class="number">3</span>, min=<span class="number">0</span>, max=<span class="number">100</span>)   <span class="comment">#随机产生3个数，最小是0，最大是100</span></span><br><span class="line"></span><br><span class="line">floor(a)         <span class="comment">#取整 '地板'值，即不小于该数字的最小整数</span></span><br><span class="line">ceiling(a)       <span class="comment">#取整 '天花板'值，即不大于该数字的最小整数</span></span><br><span class="line">round(a,<span class="number">4</span>)       <span class="comment">#取整 '四舍六入五成双'</span></span><br><span class="line"><span class="comment"># “四”是指≤4 时舍去，"六"是指≥6时进上，"五"指的是根据5后面的数字来定，当5后有数时，舍5入1；当5后无有效数字时，需要分两种情况来讲：</span></span><br><span class="line"><span class="comment">#（1）5前为奇数，舍5入1；</span></span><br><span class="line"><span class="comment">#（2）5前为偶数，舍5不进（0是偶数）。</span></span><br></pre></td></tr></table></figure>
+
+<hr>
+
+      
+
+      
+    </div>
+    <div class="article-info article-info-index">
       
       
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2020" class="archive-year">2020</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/01/15/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-15T01:18:11.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/">Perl语言学习（三）- 基序和循环</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
 	<div class="article-tag tagcloud">
 		<i class="icon-price-tags icon"></i>
 		<ul class="article-tag-list">
 			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Perl</a>
-        		</li>
-      		 
         		<li class="article-tag-list-item">
         			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程相关</a>
         		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
-
-<a href="/2020/01/15/test%E4%BD%A0%E5%A5%BD%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-15T00:18:52.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-15</time>
-</a>
-        </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/15/test%E4%BD%A0%E5%A5%BD%EF%BC%88%E4%B8%80%EF%BC%89/">test你好（一）</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">perl</a>
-        		</li>
       		 
         		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color3">ss</a>
+        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color2">R</a>
         		</li>
       		
 		</ul>
 	</div>
 
-          
+      
 
+      
+
+      
+        
+<div class="share-btn share-icons tooltip-left">
+  <div class="tooltip tooltip-east">
+    <span class="tooltip-item">
+      <a href="javascript:;" class="share-sns share-outer">
+        <i class="icon icon-share"></i>
+      </a>
+    </span>
+    <span class="tooltip-content">
+      <div class="share-wrap">
+        <div class="share-icons">
+          <a class="weibo share-sns" href="javascript:;" data-type="weibo">
+            <i class="icon icon-weibo"></i>
+          </a>
+          <a class="weixin share-sns wxFab" href="javascript:;" data-type="weixin">
+            <i class="icon icon-weixin"></i>
+          </a>
+          <a class="qq share-sns" href="javascript:;" data-type="qq">
+            <i class="icon icon-qq"></i>
+          </a>
+          <a class="douban share-sns" href="javascript:;" data-type="douban">
+            <i class="icon icon-douban"></i>
+          </a>
+          <a class="qzone share-sns" href="javascript:;" data-type="qzone">
+            <i class="icon icon-qzone"></i>
+          </a>
+          <a class="facebook share-sns" href="javascript:;" data-type="facebook">
+            <i class="icon icon-facebook"></i>
+          </a>
+          <a class="twitter share-sns" href="javascript:;" data-type="twitter">
+            <i class="icon icon-twitter"></i>
+          </a>
+          <a class="google share-sns" href="javascript:;" data-type="google">
+            <i class="icon icon-google"></i>
+          </a>
         </div>
-        <div class="clearfix"></div>
-    </header>
+      </div>
+    </span>
+  </div>
+</div>
+
+<div class="page-modal wx-share js-wx-box">
+    <a class="close js-modal-close" href="javascript:;"><i class="icon icon-close"></i></a>
+    <p>扫一扫，分享到微信</p>
+    <div class="wx-qrcode">
+      <img src="//pan.baidu.com/share/qrcode?url=http://yoursite.com/2020/02/15/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" alt="微信分享二维码">
+    </div>
+</div>
+
+<div class="mask js-mask"></div>
+      
+      <div class="clearfix"></div>
+    </div>
   </div>
 </article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
 
-<a href="/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-14T08:30:51.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-14</time>
-</a>
+  
+<nav id="article-nav">
+  
+    <a href="/2020/02/15/R%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/" id="article-nav-newer" class="article-nav-link-wrap">
+      <i class="icon-circle-left"></i>
+      <div class="article-nav-title">
+        
+          R语言学习（二）- 数据结构和简单作图
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2020/01/15/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%89%EF%BC%89/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Perl语言学习（三）- 基序和循环</div>
+      <i class="icon-circle-right"></i>
+    </a>
+  
+</nav>
+
+
+<aside class="wrap-side-operation">
+    <div class="mod-side-operation">
+        
+        <div class="jump-container" id="js-jump-container" style="display:none;">
+            <a href="javascript:void(0)" class="mod-side-operation__jump-to-top">
+                <i class="icon-font icon-back"></i>
+            </a>
+            <div id="js-jump-plan-container" class="jump-plan-container" style="top: -11px;">
+                <i class="icon-font icon-plane jump-plane"></i>
+            </div>
         </div>
-    	 
-  
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/14/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%BA%8C%EF%BC%89/">Perl语言学习（二）- 序列与字符串</a>
-    </h1>
-  
-
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Perl</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程相关</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
+        
+        
+        <div class="toc-container tooltip-left">
+            <i class="icon-font icon-category"></i>
+            <div class="tooltip tooltip-east">
+                <span class="tooltip-item">
+                </span>
+                <span class="tooltip-content">
+                    <div class="toc-article">
+                    <ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#一、基础语法"><span class="toc-number">1.</span> <span class="toc-text">一、基础语法</span></a><ol class="toc-child"><li class="toc-item toc-level-3"><a class="toc-link" href="#1-基础命令"><span class="toc-number">1.1.</span> <span class="toc-text">1.基础命令</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#2-赋值"><span class="toc-number">1.2.</span> <span class="toc-text">2.赋值</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#3-数据的读取与保存"><span class="toc-number">1.3.</span> <span class="toc-text">3.数据的读取与保存</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#4-简单的操作，初步认识R语言"><span class="toc-number">1.4.</span> <span class="toc-text">4.简单的操作，初步认识R语言</span></a></li></ol></li></ol>
+                    </div>
+                </span>
+            </div>
         </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-    
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	
+        
+    </div>
+</aside>
 
-<a href="/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/" class="archive-article-date">
-  	<time datetime="2020-01-13T04:55:06.000Z" itemprop="datePublished"><i class="icon-calendar icon"></i>2020-01-13</time>
-</a>
-        </div>
-    	 
+
+
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2020/01/13/Perl%E8%AF%AD%E8%A8%80%E5%AD%A6%E4%B9%A0%EF%BC%88%E4%B8%80%EF%BC%89/">Perl语言学习（一）- 编写第一个Perl程序</a>
-    </h1>
+  
   
 
-        <div class="article-info info-on-right">
-          
-	<div class="article-tag tagcloud">
-		<i class="icon-price-tags icon"></i>
-		<ul class="article-tag-list">
-			 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">Perl</a>
-        		</li>
-      		 
-        		<li class="article-tag-list-item">
-        			<a href="javascript:void(0)" class="js-tag article-tag-list-link color5">编程相关</a>
-        		</li>
-      		
-		</ul>
-	</div>
-
-          
-
-        </div>
-        <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
   
 
-    
+  
+
+  
 
 
           </div>
@@ -413,8 +486,8 @@
 	var yiliaConfig = {
 		mathjax: false,
 		isHome: false,
-		isPost: false,
-		isArchive: true,
+		isPost: true,
+		isArchive: false,
 		isTag: false,
 		isCategory: false,
 		open_in_new: false,
